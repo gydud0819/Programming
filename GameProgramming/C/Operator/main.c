@@ -97,7 +97,7 @@ int main()
 	//	!num2 : num2가 아니다 (!는 부정)	fasle -> true // true -> false
 
 	printf("관게 연산자 : %d\n", (num1 == num2) || (num1 < num2));	//num1 != num2 두 수가 다를 때
-	printf("관게 연산자 : %d\n\n", (num1 != num2) && (num1 < num2));	//num1 != num2 두 수가 다를 때
+	printf("관게 연산자 : %d\n\n", (num1 != num2) && (num1 > num2));	//num1 != num2 두 수가 다를 때
 
 	printf("-------------------------------------------------------------------\n\n");
 
@@ -112,6 +112,8 @@ int main()
 	//T += A
 
 	printf("num3 + num4의 값 : %d\n\n", num3);
+
+	printf("-------------------------------------------------------------------\n\n");
 
 	printf("실습 6 : 후위 연산자, 전위 연산자\n\n");
 
@@ -128,7 +130,7 @@ int main()
 
 	//	|, &, <<, >> '비트' <- 나중에 배울 예정
 
-	
+	printf("-------------------------------------------------------------------\n\n");
 
 	//게임 스토리1
 
@@ -149,36 +151,14 @@ int main()
 
 	int attackpower = baseattack + weaponLv * weight;
 	
-	printf("무기의 레벨 : %d 무기의 공격력 : %d\n", ++weaponLv, attackpower);
+	printf("무기의 레벨 : %d, 무기의 공격력 : %d\n", ++weaponLv, attackpower);
 
 	attackpower = baseattack + weaponLv * weight;
-	printf("무기의 레벨 : %d 무기의 공격력 : %d\n\n", weaponLv++, attackpower);
+	printf("무기의 레벨 : %d, 무기의 공격력 : %d\n\n", weaponLv++, attackpower);
 
+	printf("-------------------------------------------------------------------\n\n");
 
-
-
-	int maxInventorySlot = 10;
-	int AstackCount = 200;
-	int BstackCount = 200;
-
-	int Adrop = 999;
-	int Bdrop = 999;
-
-
-	printf("1시간 동안 사냥하여 아이템을 얻었다.\n");
-	printf("A 아이템 : %d개, B 아이템 : %d개를 획득했다.\n", Adrop, Bdrop);
-
-	
-	// 나머지
-
-	int AInventoryCount = (Adrop % AstackCount) == 0 ? Adrop / AInventoryCount : (Adrop / AInventoryCount) + 1;
-	int BInventoryCount = (Bdrop % BstackCount) == 0 ? Bdrop / BInventoryCount : (Bdrop / BInventoryCount) + 1;
-
-	printf("A의 갯수 : %d, B의 갯수 : %d\n", AInventoryCount, BInventoryCount);
-
-	printf("결과 : %s\n", maxInventorySlot <= (AInventoryCount + BInventoryCount) ? "가득참" : "가득안참");
-
-	
+		
 	//게임 스토리2
 	
 	// 아이템 인벤토리 -> slot. 기타 아이템 수집용 stack x 갯수
@@ -189,5 +169,20 @@ int main()
 
 	// 3항 연산자 이용해서 해보기
 
-	
+	int maxInventorySlot = 10;
+	int AStackCount = 200;
+	int BStackCount = 200;
+	int ADrop = 555;
+	int BDrop = 9999;
+
+	printf("1시간 동안 사냥을 해서 아이템을 획득을 했다.\n");
+	printf("A아이템 : %d개, B아이템 : %d개를 획득했다.\n", ADrop, BDrop);
+
+	// 나머지
+
+	int AInventoryCount = (ADrop % AStackCount) == 0 ? (ADrop / AStackCount) : (ADrop / AStackCount) + 1;
+	int BInventoryCount = (BDrop % BStackCount) == 0 ? (BDrop / BStackCount) : (BDrop / BStackCount) + 1;
+
+	printf("A의 갯수 : %d개, B의 갯수 : %d개\n", AInventoryCount, BInventoryCount);
+	printf("결과 : %s\n", maxInventorySlot <= (AInventoryCount + BInventoryCount) ? "가득참" : "가득안참");
 }

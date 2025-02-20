@@ -1,3 +1,2 @@
 ﻿  main.c
-C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Operator\main.c(174): error C4700: 초기화되지 않은 'AInventoryCount' 지역 변수를 사용했습니다.
-C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Operator\main.c(175): error C4700: 초기화되지 않은 'BInventoryCount' 지역 변수를 사용했습니다.
+  Operator.vcxproj -> C:\Users\DPC\Desktop\Programming\GameProgramming\C\Cstudy\x64\Debug\Operator.exe

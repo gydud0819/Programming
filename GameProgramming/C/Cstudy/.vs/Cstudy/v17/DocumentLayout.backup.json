@@ -3,17 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Cstudy\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E7D44E12-5499-4FE9-9BD3-9166D8B3C07A}|..\\Ch4\\Ch4.vcxproj|C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Ch4\\Data.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ED3BA652-95C6-4B90-8BA9-A9EF8576221A}|..\\Operator\\Operator.vcxproj|C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Operator\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ACCF7F35-02C4-4BEC-B4AD-636D73369CA2}|..\\Ch2\\Ch2.vcxproj|C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Ch2\\Main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F454B455-0587-4F62-83D7-7CF5F05A465C}|Cstudy1.vcxproj|C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Cstudy\\HelloWolrd.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F454B455-0587-4F62-83D7-7CF5F05A465C}|Cstudy1.vcxproj|solutionrelative:HelloWolrd.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{898C801B-086F-47B2-B2CB-AE513A99E954}|..\\Ch1\\Ch1.vcxproj|C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Ch1\\Variable.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,56 +16,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Variable.c",
-              "DocumentMoniker": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Ch1\\Variable.c",
-              "RelativeDocumentMoniker": "..\\Ch1\\Variable.c",
-              "ToolTip": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Ch1\\Variable.c",
-              "RelativeToolTip": "..\\Ch1\\Variable.c",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Data.c",
+              "DocumentMoniker": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Ch4\\Data.c",
+              "RelativeDocumentMoniker": "..\\Ch4\\Data.c",
+              "ToolTip": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Ch4\\Data.c",
+              "RelativeToolTip": "..\\Ch4\\Data.c",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-02-19T11:38:05.688Z"
+              "WhenOpened": "2025-02-20T13:00:53.808Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.c",
               "DocumentMoniker": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Operator\\main.c",
               "RelativeDocumentMoniker": "..\\Operator\\main.c",
               "ToolTip": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Operator\\main.c",
               "RelativeToolTip": "..\\Operator\\main.c",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAAAIQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-02-19T11:38:05.868Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HelloWolrd.cpp",
-              "DocumentMoniker": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Cstudy\\HelloWolrd.cpp",
-              "RelativeDocumentMoniker": "HelloWolrd.cpp",
-              "ToolTip": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Cstudy\\HelloWolrd.cpp",
-              "RelativeToolTip": "HelloWolrd.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-19T11:38:06.033Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Main.c",
-              "DocumentMoniker": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Ch2\\Main.c",
-              "RelativeDocumentMoniker": "..\\Ch2\\Main.c",
-              "ToolTip": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Ch2\\Main.c",
-              "RelativeToolTip": "..\\Ch2\\Main.c",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAwEQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-02-19T11:38:06.034Z"
             }
           ]
         }
