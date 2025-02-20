@@ -124,7 +124,7 @@ int main()
 	printf("num3의 값 : %d\n", num3++);
 	printf("num3의 값 : %d\n", num3);
 	printf("num4의 값 : %d\n", ++num4);
-	printf("num4의 값 : %d\n", num4);
+	printf("num4의 값 : %d\n\n", num4);
 
 	//	|, &, <<, >> '비트' <- 나중에 배울 예정
 
@@ -142,6 +142,41 @@ int main()
 	//AP = BP + WL * GP; 총공 = 기본 공격력 + 무기 레벨 * 성장 계수
 
 	
+
+	int baseattack = 10;
+	int weaponLv = 1;
+	int weight = 2;
+
+	int attackpower = baseattack + weaponLv * weight;
+	
+	printf("무기의 레벨 : %d 무기의 공격력 : %d\n", ++weaponLv, attackpower);
+
+	attackpower = baseattack + weaponLv * weight;
+	printf("무기의 레벨 : %d 무기의 공격력 : %d\n\n", weaponLv++, attackpower);
+
+
+
+
+	int maxInventorySlot = 10;
+	int AstackCount = 200;
+	int BstackCount = 200;
+
+	int Adrop = 999;
+	int Bdrop = 999;
+
+
+	printf("1시간 동안 사냥하여 아이템을 얻었다.\n");
+	printf("A 아이템 : %d개, B 아이템 : %d개를 획득했다.\n", Adrop, Bdrop);
+
+	
+	// 나머지
+
+	int AInventoryCount = (Adrop % AstackCount) == 0 ? Adrop / AInventoryCount : (Adrop / AInventoryCount) + 1;
+	int BInventoryCount = (Bdrop % BstackCount) == 0 ? Bdrop / BInventoryCount : (Bdrop / BInventoryCount) + 1;
+
+	printf("A의 갯수 : %d, B의 갯수 : %d\n", AInventoryCount, BInventoryCount);
+
+	printf("결과 : %s\n", maxInventorySlot <= (AInventoryCount + BInventoryCount) ? "가득참" : "가득안참");
 
 	
 	//게임 스토리2
