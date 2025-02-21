@@ -1,0 +1,28 @@
+﻿  Main.c
+C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Ch5\Main.c(89,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+  C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Ch5\Main.c(89,9):
+  서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Ch5\Main.c(90,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+  C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Ch5\Main.c(90,9):
+  서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Ch5\Main.c(91,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+  C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Ch5\Main.c(91,9):
+  서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Ch5\Main.c(92,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+  C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Ch5\Main.c(92,9):
+  서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Ch5\Main.c(101,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+  C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Ch5\Main.c(101,9):
+  서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Ch5\Main.c(102,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'size_t'입니다.
+  C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Ch5\Main.c(102,9):
+  서식 문자열에서 '%zd'을(를) 사용하는 것이 좋습니다.
+  
+C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Ch5\Main.c(178,12): warning C4552: '<=': 식의 결과가 사용되지 않습니다.
+C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Ch5\Main.c(198,17): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Ch5.vcxproj -> C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Cstudy\x64\Debug\Ch5.exe
