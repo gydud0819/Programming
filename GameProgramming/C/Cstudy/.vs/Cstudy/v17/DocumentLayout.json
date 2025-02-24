@@ -3,10 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Cstudy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E7D44E12-5499-4FE9-9BD3-9166D8B3C07A}|..\\Ch4\\Ch4.vcxproj|C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Ch4\\Data.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A4449843-3C7F-41ED-85ED-9FEBD8F8536D}|..\\Ch6\\Ch6.vcxproj|C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Ch6\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED3BA652-95C6-4B90-8BA9-A9EF8576221A}|..\\Operator\\Operator.vcxproj|C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Operator\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -16,32 +16,40 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Data.c",
-              "DocumentMoniker": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Ch4\\Data.c",
-              "RelativeDocumentMoniker": "..\\Ch4\\Data.c",
-              "ToolTip": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Ch4\\Data.c",
-              "RelativeToolTip": "..\\Ch4\\Data.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-02-20T13:00:53.808Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "stdio.h",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
+              "ToolTip": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
+              "ViewState": "AgIAAD8EAAAAAAAAAAAIwEoEAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-24T13:39:24.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "main.c",
-              "DocumentMoniker": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Operator\\main.c",
-              "RelativeDocumentMoniker": "..\\Operator\\main.c",
-              "ToolTip": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Operator\\main.c",
-              "RelativeToolTip": "..\\Operator\\main.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAA0AAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Ch6\\main.c",
+              "RelativeDocumentMoniker": "..\\Ch6\\main.c",
+              "ToolTip": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Ch6\\main.c",
+              "RelativeToolTip": "..\\Ch6\\main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-02-19T11:38:05.868Z",
+              "WhenOpened": "2025-02-24T13:12:12.993Z",
               "EditorCaption": ""
             }
           ]

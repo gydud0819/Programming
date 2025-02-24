@@ -139,6 +139,9 @@ int main()
 		printf("정답입니다!\n");
 	}
 
+	printf("----------------\n");
+
+	printf("예제 문제2\n");
 	// 예제 문제2
 	// 숫자 맞추기 게임에서 문제를 맞춘 횟수에 따라서 랭킹을 부여해보고 싶을때
 
@@ -193,26 +196,27 @@ int main()
 	
 
 	printf("로또 번호 생성기\n");
-	printf("로또의 최대 번호 개수 : 45\n");
+	printf("로또의 최대 번호 개수 : 45개\n");
 
-	int max = 45;
-	int randomNumber2 = 6;
+	int max = 45;	//로또 의 최대 번호 개수
+	int randomNumber2;	//45개의 숫자 중 랜덤으로 나올 6개의 숫자
 
-	srand(time(NULL));
+	srand(time(NULL));	//디버그 할때마다 초기화되면서 매번 새로운 숫자를 뽑아내게 해준다.
 
-	int userNumber;
-	
+	printf("생성된 로또 번호\n\n");
+
 	for (int i = 1; i <= 6; i++)
 	{
-		scanf_s("%d", &userNumber);
-		printf("임의의 번호 : %d", max % randomNumber2);
-	}
-
-	/*if (randomNumber2 < max)
-	{
-		randomNumber2 = (rand () % max) + 1;
+		randomNumber2 = rand() % max + 1;	//최대 개수 45개까지 포함하여 1부터 45까지 랜덤으로 6개를 추첨하는 것
 		printf("%d\n", randomNumber2);
-	}*/
+			
+		if (i < 6)
+		{
+			printf("-\n");
+		}
+
+		printf("\n");
+	}
 
 	return 0;
 }
