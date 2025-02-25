@@ -1,2 +1,3 @@
 ﻿  main.c
-  Ch7.vcxproj -> C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Cstudy\x64\Debug\Ch7.exe
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\Ch7\main.c(211,6): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+  Ch7.vcxproj -> C:\Users\DPC\Desktop\Programming\GameProgramming\C\Cstudy\x64\Debug\Ch7.exe

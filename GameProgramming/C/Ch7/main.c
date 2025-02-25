@@ -37,6 +37,8 @@ int main()
 	
 	printf("A 아이템의 개수 : %d개\n\n", Acount);
 
+	printf("---------------------------\n");
+
 	printf("for 반복문 예제2\n");
 
 	int Bcount = 0;
@@ -46,6 +48,8 @@ int main()
 		Bcount = Bcount + i;
 	}
 	printf("B 아이템의 개수 : %d개\n\n", Bcount);
+
+	printf("---------------------------\n");
 
 	printf("for 반복문 예제3\n");
 
@@ -57,6 +61,8 @@ int main()
 	// 게임의 이야기를 입혀서 반복문 표현해보기
 
 	//break <- 
+
+	printf("---------------------------\n");
 
 	for (; ; )
 	{
@@ -128,9 +134,12 @@ int main()
  * 몇번 반복해야 할지 잘 모르겠는 내용이 있을 수 있다.
  * ex) 잘못된 값을 입력했을 때 정확한 값을 요구하는 코드
  */
+	printf("---------------------------\n");
 
 	// while 반복문
 	// 무한 반복문 (중괄호 속 코드가 참이면 무한반복한다)
+
+	printf("while문 예제1\n\n");
 
 	int xi = 0;
 
@@ -140,6 +149,8 @@ int main()
 
 		printf("xi의 값 : %d\n", xi);
 	}
+
+	printf("---------------------------\n");
 
 	//for반복문을 쓰면 좋을까? while반복문을 쓰면 좋을까?
 
@@ -153,7 +164,9 @@ int main()
 	// 2만큼 증가하는 변수 numA가 있다.
 	// 이 numA가 10보다 크거나 같을 때 종료되기를 원한다.
 	// numA 숫자가 10보다 커지기 위해 몇 번 반복했는지 알고 싶다.
-	// 반복한 결가 정수형 countA로 출력하기
+	// 반복한 결과를 정수형 countA로 출력하기
+
+	printf("while문 예제2\n\n");
 
 	int numA = 0;
 	int CountA = 0;
@@ -185,24 +198,31 @@ int main()
 	printf("반복한 횟수 : %d\n", CountA);
 	printf("현재 값 : %d\n", numA);
 
-	// for반복문 표현 <-> while반본묵 표현하기
+	// for반복문 표현 <-> while반복문 표현하기
 
 	//실습예제 1
 	//1부터 10 사이의 값중 짝수만 출력하기
 	// 현재 값 : 2, 3, 4, 5...
 
+	printf("---------------------------\n");
+
 	printf("실습 예제1\n");
 
-	int num = 0;
+	int i;
 	int sum = 0;
 
-	for (int i = 0; i < 10; i+=2)
-	{
-		num += 2;
-		sum++;
-	}
-	printf("짝수 : %d\n", num);
+	printf("짝수 출력하기\n");
 
+	for (int i = 0; i < 10; i++)
+	{
+		if (i % 2 == 0)
+		{
+			printf("%d ", i);
+			sum = i;
+		}
+	}
+	
+	return 0;
 
 	// 실습을 다했을 경우 Y, N , 다시 입력하세요 <- Y,N 입력할 때 까지 무한히 반복되는 코드 작성하기
 
