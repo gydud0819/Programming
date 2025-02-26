@@ -3,11 +3,6 @@
 */
 #include "menu.h"
 
-int WeaponLv = 1;
-int BasicAttack = 10;
-int Weight = 5;
-int CurrentAttackPower = 0;
-
 void SelectMenu()
 {
 	while (true)
@@ -23,18 +18,7 @@ void SelectMenu()
 
 		if (inputNumber == 1)
 		{
-			// 무기의 레벨
-			// 무기의 기본 공격력
-			// 무기의 가중치
-			// 현재 공격력
-
-			// 강화를 무조건 성공하는 case
-			// 무기의 레벨을 1상승 시킵니다.
-			WeaponLv = WeaponLv + 1;
-			// 현재 공격력 = 기본 공격력 + 레벨 * 가중치
-			CurrentAttackPower = BasicAttack + WeaponLv * Weight;
-			// printf("현재 공격력, 레벨");
-			printf("현재 공격력은 %d, 무기의 레벨은 %d입니다.\n", CurrentAttackPower, WeaponLv);
+			Upgrade();
 		}
 		else if (inputNumber == 2)
 		{
@@ -42,7 +26,7 @@ void SelectMenu()
 		}
 		else if (inputNumber == 3)
 		{
-			printf("프로그램을 종료합니다.\n");
+			printf("강화를 종료합니다.\n");
 			break;
 		}
 		else

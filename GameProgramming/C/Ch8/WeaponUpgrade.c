@@ -1,6 +1,8 @@
 #include "menu.h"
 #include "WeaponUpgrade.h"
 
+// 무기강화 업그레이드 소스파일
+
 int WeaponLv = 1;
 int BasicAttack = 10;
 int Weight = 5;
