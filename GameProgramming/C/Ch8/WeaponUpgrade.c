@@ -1,5 +1,6 @@
-#include "menu.h"
+#include "menu.h"				// menu와 WeaponUpgrade 헤더파일을 소스파일에 넣어야 함
 #include "WeaponUpgrade.h"
+
 
 // 무기강화 업그레이드 소스파일
 
