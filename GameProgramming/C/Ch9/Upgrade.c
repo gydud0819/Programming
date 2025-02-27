@@ -7,9 +7,9 @@
 * 레벨, 공격력 정보 -> 전역 변수 선언. (C++ 다른 방식, C언어 다른 방식)
 */
 
-int WeaponLv = 0;
-int NomalLv = 1;
-int AdvanceLv = 0;
+int WeaponLv = 0;		// 무기의 레벨
+int NomalLv = 1;		// 기본 공격력
+int AdvanceLv = 0;		// 강화된 레벨 
 
 int BaseAP = 10;
 int CurrentAP = 0;
@@ -33,7 +33,7 @@ void ShowUpgradeMenu()
 		}
 		else if (inputnumber == 2)
 		{
-			HighUpgrade();
+			HighUpgrade();		// 고급 강화 함수
 			
 		}
 		else if (inputnumber == 3)
@@ -49,21 +49,21 @@ void ShowUpgradeMenu()
 
 }
 
-void WeaponUpgrade()
+void WeaponUpgrade() // 무기 기본 강화 함수
 {
 	printf("무기를 강화합니다.\n");
 		
 	int Weight = 5;
 
 	NomalLv = NomalLv + 1;
-	CurrentAP = CurrentAP + BaseAP + Weight * WeaponLv;
+	CurrentAP = CurrentAP + BaseAP + Weight * WeaponLv;		// 총 공격력
 
-	WeaponLv = WeaponLv + NomalLv + AdvanceLv;
+	WeaponLv = WeaponLv + NomalLv + AdvanceLv;				// 무기의 레벨 = 무기 레벨 + 기본 레벨 + 강화된 레벨
 
 	printf("현재 무기의 레벨 : %d, 현재 무기의 공격력 : %d\n", WeaponLv, CurrentAP);
 }
 
-void HighUpgrade()
+void HighUpgrade()	// 무기 고급 강화 함수
 {
 	printf("고급 강화를 이용합니다.\n");
 

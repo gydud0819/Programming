@@ -84,6 +84,7 @@ void ShowExample()
 void LocalFunc(int a)
 {
 	// 만약에 함수가 종료될 때 소멸되지 않으면 어떤 일이 일어날까?
+	// 메모리가 누수되며 정말 최악의 경우에는 블루스크린이 뜬다? 
 
 	int value = 5;
 	printf("a의 값에 5를 더한 값 : %d\n", a + value);

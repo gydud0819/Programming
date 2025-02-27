@@ -6,8 +6,8 @@
 #include <stdlib.h>
 #include <Windows.h>
 
-void ShowUpgradeMenu();	// 메뉴를 보여주는
+void ShowUpgradeMenu();	// 메뉴를 보여주는 함수
 
-void WeaponUpgrade();	// 무기 강화를 하는 
+void WeaponUpgrade();	// 기본 무기 강화를 하는 함수
 
-void HighUpgrade();
+void HighUpgrade();		// 고급 무기 강화를 하는 함수
