@@ -24,12 +24,21 @@
     <ClCompile Include="Upgrade.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Curreny.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lecture.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Upgrade.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Curreny.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

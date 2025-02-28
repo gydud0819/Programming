@@ -16,6 +16,9 @@ int CurrentAP = 0;
 
 void ShowUpgradeMenu()
 {
+	int NomalCost = 100;
+	int HighCost = 500;
+
 	while (true)
 	{
 		printf("1. 강화하기\n");
@@ -28,12 +31,20 @@ void ShowUpgradeMenu()
 
 		if (inputnumber == 1)
 		{
+			// 현재 돈이 충분한가?
+			if (UseMoney(NomalCost))
+			{
 			WeaponUpgrade();
+			}
 			
 		}
 		else if (inputnumber == 2)
 		{
-			HighUpgrade();		// 고급 강화 함수
+			// 현재 돈이 충분한가?
+			if (UseMoney(HighCost))
+			{
+				HighUpgrade();		// 고급 강화 함수
+			}
 			
 		}
 		else if (inputnumber == 3)
