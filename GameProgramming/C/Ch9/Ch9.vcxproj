@@ -127,13 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Curreny.c" />
+    <ClCompile Include="Currency.c" />
     <ClCompile Include="lecture.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Upgrade.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Curreny.h" />
+    <ClInclude Include="Currency.h" />
     <ClInclude Include="lecture.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="Upgrade.h" />

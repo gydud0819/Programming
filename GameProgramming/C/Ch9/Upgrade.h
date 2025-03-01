@@ -5,7 +5,7 @@
 #include <time.h>
 #include <stdlib.h>
 #include <Windows.h>
-#include "Curreny.h"
+#include "Currency.h"
 
 void ShowUpgradeMenu();	// 메뉴를 보여주는 함수
 
