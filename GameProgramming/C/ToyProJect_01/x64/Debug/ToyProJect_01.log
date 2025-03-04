@@ -1,5 +1,10 @@
-﻿  Random.c
-C:\Users\Administrator\Desktop\Programming\GameProgramming\C\ToyProJect_01\Random.c(22,3): warning C4013: 'printf'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+﻿  Currency.c
+  EnforceWeapon.c
+  Intro.c
   main.c
+  Play.c
+  Random.c
   코드를 생성하고 있습니다...
-  ToyProJect_01.vcxproj -> C:\Users\Administrator\Desktop\Programming\GameProgramming\C\Cstudy\x64\Debug\ToyProJect_01.exe
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\ToyProJect_01\Random.c(22,3): warning C4013: 'printf'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\ToyProJect_01\Currency.c(20,1): warning C4715: 'CanUpgrade': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  ToyProJect_01.vcxproj -> C:\Users\DPC\Desktop\Programming\GameProgramming\C\Cstudy\x64\Debug\ToyProJect_01.exe
