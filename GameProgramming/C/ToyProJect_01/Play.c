@@ -3,11 +3,14 @@
 
 // 강화 게임에 필요한 전역 변수들
 // 게임 목표
-int CurrentLevel = 8;	// 현재 레벨
+int CurrentLevel = 0;	// 현재 레벨
 int TargetLevel  = 10;	// 목표 레벨
-
 bool IsClear = false;
-bool IsFail = false;
+
+// 방해 요인 - 재화
+int CurrentMoney = 10000;
+int UpgradeCost = 1000;
+bool IsFail = false;	// 재화가 일정 이하 일 때
 
 void ShowTitle()
 {
@@ -68,7 +71,7 @@ void GameLogic()	// EnforceWeapon.h
 	if (IsFail)
 	{
 		// 게임 오버
-		printf("Game Over...\n");
+		printf("Game Over...??\n");
 	}
 }
 

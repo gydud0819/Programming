@@ -127,15 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Currency.c" />
     <ClCompile Include="EnforceWeapon.c" />
     <ClCompile Include="Intro.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Play.c" />
+    <ClCompile Include="Random.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Currency.h" />
     <ClInclude Include="EnforceWeapon.h" />
     <ClInclude Include="Intro.h" />
     <ClInclude Include="Play.h" />
+    <ClInclude Include="Random.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

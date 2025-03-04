@@ -2,8 +2,8 @@
 
 void ShowMenu()
 {
-	printf("1. 강화한다.\n");
-	printf("2. 현재 상태를 확인한다.\n");
+	printf("1. 강화를 합니다!\n");
+	printf("2. 현재 상태를 확인합니다!\n");
 
 	int InPutNumber = -1;
 	scanf_s("%d", &InPutNumber);
@@ -11,15 +11,35 @@ void ShowMenu()
 
 	if (InPutNumber == 1)
 	{
+		// 업그레이드 비용을 지불한다.
+		if (CanUpgrade(UpgradeCost))
+		{
+			if (CheckRandomFunc((50)))	// 90% 성공
+			{
+				Upgrade();
+			}
+			else						// 실패
+			
+			{
+				printf("강화에 실패했습니다ㅠㅠ\n");
+			}
+
+		}
+
+		ShowStatus();
+
+
+
 		// 강화한다.
 		//printf("강화한다.\n");	//Upgrade 함수로 대체
-		Upgrade();
+
 
 	}
 	else if (InPutNumber == 2)
 	{
 		// 상태를 확인한다.
-		printf("상태를 확인합니다!\n");		// ShowStatus 함수로 대체
+		//printf("상태를 확인합니다!\n");		// ShowStatus 함수로 대체
+		ShowStatus();
 	}
 	else
 	{
@@ -48,11 +68,15 @@ void Upgrade()
 {
 	// CurrentLevel = CurrentLevel + 1;
 	CurrentLevel++;
+
+	printf("강화에 성공했습니다!\n");
 }
 
 void ShowStatus()
 {
-	
+	printf("현재 무기 레벨 : %dLv\n", CurrentLevel);
+	// 현재 보유한 금액
+	printf("현재 보유 금액 : %d원\n", CurrentMoney);
 }
 
 // 현재 무기 레벨 == 최대 레벨

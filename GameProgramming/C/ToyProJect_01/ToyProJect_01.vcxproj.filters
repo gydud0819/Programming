@@ -27,6 +27,12 @@
     <ClCompile Include="EnforceWeapon.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Random.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Currency.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Intro.h">
@@ -36,6 +42,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="EnforceWeapon.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Currency.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
