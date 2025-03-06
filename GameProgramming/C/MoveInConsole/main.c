@@ -8,7 +8,7 @@
 #include <stdbool.h>
 #include <Windows.h>
 #include "MapBoder.h"
-#include <conio.h>
+#include <conio.h>	// _kbhit() 함수를 쓸 수 있는 헤더파일
 #include <stdlib.h>
 
 // 커서 : OutPut 결과를 출력하는 위치를 안내해주는 안내 기호.
@@ -37,10 +37,9 @@ void HideCursor()
 * 플레이어의 시작 위치를 설정하기
 * 좌표에 대한 감각을 익히기
 * SetCurPos 함수를 이용하여 내가 원하는 위치에 플레이어 배치하기
-* int pos
 */
 
-bool GameOver = false;
+bool GameOver = false;	// bool 함수를 사용하여 플레이어가 물체를 만나면 종료되게 하기
 
 int main()
 {
@@ -60,7 +59,7 @@ int main()
 
 	HideCursor();
 	SetCurPosition(playerX, playerY);
-	printf("●");	// 현재 커서 위치에 "" 문자를 출력한다.
+	printf("□");	// 현재 커서 위치에 "" 문자를 출력한다.
 
 	
 	
@@ -75,7 +74,7 @@ int main()
 			// 코드가 일치하면 true (C언어에서 입력을 사용할 때 사용한다.)
 			if (GetAsyncKeyState(VK_UP) & 0x8000) // 위
 			{
-				playerY--;
+				playerY -= 1;
 				if (playerY <= 0)
 				{
 					playerY = 1;
@@ -84,8 +83,9 @@ int main()
 
 			if (GetAsyncKeyState(VK_DOWN) & 0x8000) // 아래
 			{
-				playerY++;
-				if (playerY >= 19)
+				playerY += 1;
+				if (playerY >= 19)		// 벽 충돌을 방지하기 위해 20 18이 맞지만 직접 디버그한 결과 
+										// 20 18은 어긋나는 것을 볼 수 있어 19 17로 설정했다.
 				{
 					playerY = 17;
 				}
@@ -94,9 +94,9 @@ int main()
 			if (GetAsyncKeyState(VK_LEFT) & 0x8000) // 좌
 			{
 				playerX -= 2;
-				if (playerX < 2)
+				if (playerX < 2)	// x의 값 +2 (== 1칸이동)
 				{
-					playerX = 2;
+					playerX = 2;	
 				}
 			}
 
@@ -117,7 +117,7 @@ int main()
 
 		//printf("현재 좌표 : (%d, %d)", playerX, playerY); // 테스트 코드 :
 
-		system("cls");
+		system("cls");	// 잔상이 남지 않게 쓰기. (불안정한 코드)
 		ShowBoder();
 		SetCurPosition(playerX, playerY);
 		printf("□");
@@ -135,7 +135,7 @@ int main()
 		//break;
 
 		// 캐릭터가 특정 위치에 도달하면 GameOver가 true 바뀌면서 종료되게 하기
-		if (playerX == 1 && playerY == 36)
+		if (playerX == 2 && playerY == 18)	// 하트의 좌표
 		{
 			GameOver = true;
 		}
