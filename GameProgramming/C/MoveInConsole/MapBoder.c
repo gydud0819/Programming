@@ -22,6 +22,6 @@ void ShowBoder()
 	printf("¡á                                    ¡á\n");
 	printf("¡á                                    ¡á\n");
 	printf("¡á                                    ¡á\n");
-	printf("¡á¢¾                                  ¡á\n");
+	printf("¡á                                    ¡á\n");
 	printf("¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á¡á\n");
 }

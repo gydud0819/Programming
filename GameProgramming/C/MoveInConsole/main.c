@@ -1,5 +1,5 @@
 /*
-* 작성일	: 2025-03-06
+* 작성일	: 2025-03-06 / 03-07
 * 작성자	: 박효영
 * 주제	: 콘솔창에 플레이어가 움직이도록 만들기
 */
@@ -10,6 +10,7 @@
 #include "MapBoder.h"
 #include <conio.h>	// _kbhit() 함수를 쓸 수 있는 헤더파일
 #include <stdlib.h>
+#include "Random.h"
 
 // 커서 : OutPut 결과를 출력하는 위치를 안내해주는 안내 기호.
 
@@ -22,15 +23,25 @@ void SetCurPosition(int x, int y)
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 }
 
-// 커서 보이는거 방지 함수
-void HideCursor()
+// 커서를 숨기고 싶을 때 (bool true일때 커서가 보이고 false일때 보이지 않는다.)
+void SetCursorVisble(bool enable)
 {
-	CONSOLE_CURSOR_INFO info;
-	info.bVisible = false;
-	info.dwSize = 1;
+	CONSOLE_CURSOR_INFO CursorInfo;
+	CursorInfo.bVisible = enable;
+	CursorInfo.dwSize = 1;
 
-	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
+	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &CursorInfo);
 }
+
+// 커서 보이는거 방지하는 함수
+//void HideCursor()
+//{
+//	CONSOLE_CURSOR_INFO info;
+//	info.bVisible = false;
+//	info.dwSize = 1;
+//
+//	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
+//}
 
 /*
 * 도전 과제
@@ -39,7 +50,16 @@ void HideCursor()
 * SetCurPos 함수를 이용하여 내가 원하는 위치에 플레이어 배치하기
 */
 
+// 전역변수
 bool GameOver = false;	// bool 함수를 사용하여 플레이어가 물체를 만나면 종료되게 하기
+int Currentscore = 0;
+int randomX = 18;
+int randomY = 1;
+int playTime = 0;
+
+int questItemPosX = 34;
+int questItemPosY = 5;
+bool isQuest = false;
 
 int main()
 {
@@ -48,6 +68,15 @@ int main()
 
 	
 	ShowBoder();
+	CreateRandomSeed();
+
+	SetCurPosition(randomX, randomY);
+	printf("★");
+
+	SetCurPosition(questItemPosX, questItemPosY);
+	printf("♣");
+
+	SetCursorVisble(false);
 
 	// 플레이어의 현재 좌표를 설명해주는 변수 선언하기
 
@@ -57,7 +86,7 @@ int main()
 
 	// 플레이어가 처음 시작할 때 등장하는 것 만들기
 
-	HideCursor();
+	//HideCursor();
 	SetCurPosition(playerX, playerY);
 	printf("□");	// 현재 커서 위치에 "" 문자를 출력한다.
 
@@ -69,6 +98,8 @@ int main()
 	{
 		if (_kbhit())
 		{
+			SetCurPosition(playerX, playerY);	// 잔상이 남지 않게 한다. 
+			printf("  ");
 			// 화살표 입력 인식 넣기
 
 			// 코드가 일치하면 true (C언어에서 입력을 사용할 때 사용한다.)
@@ -117,12 +148,40 @@ int main()
 
 		//printf("현재 좌표 : (%d, %d)", playerX, playerY); // 테스트 코드 :
 
-		system("cls");	// 잔상이 남지 않게 쓰기. (불안정한 코드)
-		ShowBoder();
+		//system("cls");	// 잔상이 남지 않게 쓰기. (불안정한 코드) -> 이걸 쓰면 전체가 지워진다.
+		//ShowBoder();
 		SetCurPosition(playerX, playerY);
-		printf("□");
+		printf("옷");
+
+		// UI 코드
+		SetCurPosition(65, 0);
+		printf("Score");
+
+		SetCurPosition(65, 1);
+		printf("현재 점수 : %d", Currentscore);
+
+		while (true)
+		{
+			// 시간 제어 코드
+			playTime++;
+			//int hour = playTime / 360;
+			int minute = playTime / 60;
+			int second = playTime % 60;
+
+			SetCurPosition(65, 2);
+			printf("플레이 시간 : %02d : %02d", minute, second);
+
+			Sleep(1000);
+		}
+
+		if (isQuest)
+		{
+			SetCurPosition(65, 3);
+			printf("퀘스트가 활성화 되었습니다!");
+		}
 
 		Sleep(50); 
+
 
 		// 1. Wait InputKey (특정 키를 눌렀을 때)
 		// 2. playerX, playerY 값을 변화시킨다.
@@ -135,12 +194,22 @@ int main()
 		//break;
 
 		// 캐릭터가 특정 위치에 도달하면 GameOver가 true 바뀌면서 종료되게 하기
-		if (playerX == 2 && playerY == 18)	// 하트의 좌표
+		if (playerX == randomX && playerY == randomY)	// 아이템과 플레이어의 위치가 같은 상황
 		{
-			GameOver = true;
+			Currentscore++; // 1. 특정 좌표에 가면 점수가 무한정 오른다.
+			// 2. 아이템의 위치가 변경되어야 한다. (좌표를 바꾼다.)
+			randomX = ReturnPosX();
+			randomY = ReturnPosY();
+			SetCurPosition(randomX, randomY);
+			printf("★");
 		}
 
-		if (GameOver)
+		if (playerX == questItemPosX && playerY == questItemPosY)
+		{
+			isQuest = true;
+		}
+
+		if (Currentscore == 10)
 		{
 			break;
 		}
