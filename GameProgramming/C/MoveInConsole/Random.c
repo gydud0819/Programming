@@ -7,7 +7,6 @@ void CreateRandomSeed()
 
 int ReturnPosX()
 {
-	 
 	// 0 ~ 40 
 	// 랜덤값 + 짝수를 반환해야 한다.
 	

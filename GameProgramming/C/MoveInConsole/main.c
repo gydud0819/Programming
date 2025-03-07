@@ -160,20 +160,16 @@ int main()
 		SetCurPosition(65, 1);
 		printf("현재 점수 : %d", Currentscore);
 
-		while (true)
-		{
-			// 시간 제어 코드
-			playTime++;
-			//int hour = playTime / 360;
-			int minute = playTime / 60;
-			int second = playTime % 60;
+		
+		// 시간 제어 코드
+		playTime++;
+		//int hour = playTime / 360;
+		int minute = playTime / 60;
+		int second = playTime % 60;
 
-			SetCurPosition(65, 2);
-			printf("플레이 시간 : %02d : %02d", minute, second);
-
-			Sleep(1000);
-		}
-
+		SetCurPosition(65, 2);
+		printf("플레이 시간 : %02d : %02d", minute, second);
+		
 		if (isQuest)
 		{
 			SetCurPosition(65, 3);
@@ -206,7 +202,7 @@ int main()
 
 		if (playerX == questItemPosX && playerY == questItemPosY)
 		{
-			isQuest = true;
+			isQuest = true;	// 플레이어와 아이템이 만났을 때 퀘스트 문장이 출력된다.
 		}
 
 		if (Currentscore == 10)
