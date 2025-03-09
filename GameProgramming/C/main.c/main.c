@@ -30,7 +30,12 @@ void HideCursor()
 	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
 }
 
+extern int map[20][20];
+
 //void SetCurPosition(int x, int y);
+
+int itemCount = 0;
+
 
 int main()
 {
@@ -54,50 +59,77 @@ int main()
 			// 코드가 일치하면 true (C언어에서 입력을 사용할 때 사용한다.)
 			if (GetAsyncKeyState(VK_UP) & 0x8000) // 위
 			{
-				playerY -= 1;
-				if (playerY <= 0)
+				playerY--;
+				if (map[playerY][playerX] == 1)
 				{
-					playerY = 1;
+					playerY++;
+				}
+				else if (map[playerY][playerX] == 2) // 아이템 위치
+				{
+					itemCount++;
+					map[playerY][playerX] = 0; // 아이템 먹고 위치 초기화
 				}
 			}
 
 			if (GetAsyncKeyState(VK_DOWN) & 0x8000) // 아래
 			{
-				playerY += 1;
-				if (playerY >= 19)		// 벽 충돌을 방지하기 위해 20 18이 맞지만 직접 디버그한 결과 
-					// 20 18은 어긋나는 것을 볼 수 있어 19 17로 설정했다.
+				playerY++;
+				if (map[playerY][playerX] == 1)		// 플레이어가 벽을 뚫는 사태가 발생하면 안되기에 
+					// 플레이어가 벽에 닿이면 다시 뒤로 밀려나는 것처럼 뚫지 못하게 설정하였다.
 				{
-					playerY = 17;
+					playerY--;
+				}
+				else if (map[playerY][playerX] == 2) // 아이템 위치
+				{
+					itemCount++;
+					map[playerY][playerX] = 0; // 아이템 먹고 위치 초기화
 				}
 			}
 
 			if (GetAsyncKeyState(VK_LEFT) & 0x8000) // 좌
 			{
-				playerX -= 2;
-				if (playerX < 2)	// x의 값 +2 (== 1칸이동)
+				playerX--;
+				if (map[playerY][playerX] == 1)	// x의 값 +2 (== 1칸이동)
 				{
-					playerX = 1;
+					playerX++;
+				}
+				else if (map[playerY][playerX] == 2) // 아이템 위치
+				{
+					itemCount++;
+					map[playerY][playerX] = 0; // 아이템 먹고 위치 초기화
 				}
 			}
 
 			if (GetAsyncKeyState(VK_RIGHT) & 0x8000) // 우
 			{
-				playerX += 2;
-				if (playerX > 19)
+				playerX++;
+				if (map[playerY][playerX] == 1)
 				{
-					playerX = 18;
+					playerX--;
 				}
+				else if (map[playerY][playerX] == 2) // 아이템 위치
+				{
+					itemCount++;
+					map[playerY][playerX] = 0; // 아이템 먹고 위치 초기화
+				}
+
 			}
 			else
 			{
 				// x,y 가 움직이지 않을때 그대로 
 			}
-
 		}
+
 		SetCurPosition(playerX, playerY);
 		printf("옷");
 
 		Sleep(50);
+
+		if (itemCount == 4)
+		{
+			break;
+		}
+
 	}
 }
 
