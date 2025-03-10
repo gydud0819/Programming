@@ -4,12 +4,18 @@
 * 주제	: 미로 탈출 게임
 */
 
+/*
+* 윈도우 콘솔 배경 및 글자 색 변경 방법
+*/
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <Windows.h>
 #include <time.h>
 #include <conio.h>
 #include "MapBoder.h"
+#include "Exit.h"
+#include "Console.h"
 
 //커서 이동 함수
 void SetCurPosition(int x, int y)
@@ -35,7 +41,7 @@ extern int map[20][20];
 //void SetCurPosition(int x, int y);
 
 int itemCount = 0;
-
+bool Exit = false;	// 출구
 
 int main()
 {
@@ -123,10 +129,20 @@ int main()
 		SetCurPosition(playerX, playerY);
 		printf("옷");
 
-		Sleep(50);
+		Sleep(100);
 
-		if (itemCount == 4)
+		if (itemCount == 4)	// 아이템을 다 먹으면 출구가 생겨야 하는데
 		{
+			SetCurPosition(20, 19);
+			printf(" ");
+			//ShowMap2();
+			
+		}
+		if(Exit)
+		{
+			SetCurPosition(30, 30);
+			printf("Game Over!");	// 출구로 나가면 나올 코드
+
 			break;
 		}
 
