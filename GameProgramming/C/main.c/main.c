@@ -14,7 +14,6 @@
 #include <time.h>
 #include <conio.h>
 #include "MapBoder.h"
-#include "Exit.h"
 #include "Console.h"
 
 //커서 이동 함수
@@ -36,24 +35,26 @@ void HideCursor()
 	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
 }
 
-extern int map[20][20];
+extern int map[20][20];	// 미로의 크기 
 
-//void SetCurPosition(int x, int y);
+int itemCount = 0;	// 아이템 개수
 
-int itemCount = 0;
-bool Exit = false;	// 출구
+bool Exit = false;	// bool 함수를 사용하여 아이템을 다 먹으면 출구가 활성화 되도록 했다.
+int exitX = 19;		// 출구의 X 좌표
+int exitY = 18;		// 출구의 Y 좌표
 
 int main()
 {
 	ShowMap();
 	HideCursor();
 
-	int playerX = 10;
-	int playerY = 1;
+	int playerX = 10;	// 플레이어의 시작 위치
+	int playerY = 1;	// 플레이어의 시작 위치
 
 	SetCurPosition(playerX, playerY);
 	printf("옷");
 
+	
 	while (true)
 	{
 		if (_kbhit())
@@ -75,6 +76,10 @@ int main()
 					itemCount++;
 					map[playerY][playerX] = 0; // 아이템 먹고 위치 초기화
 				}
+				else if (playerX == exitX && playerY == exitY)
+				{
+					Exit = true; // 출구에 도달하면 게임 종료
+				}
 			}
 
 			if (GetAsyncKeyState(VK_DOWN) & 0x8000) // 아래
@@ -90,6 +95,10 @@ int main()
 					itemCount++;
 					map[playerY][playerX] = 0; // 아이템 먹고 위치 초기화
 				}
+				else if (playerX == exitX && playerY == exitY)
+				{
+					Exit = true; // 출구에 도달하면 게임 종료
+				}
 			}
 
 			if (GetAsyncKeyState(VK_LEFT) & 0x8000) // 좌
@@ -103,6 +112,10 @@ int main()
 				{
 					itemCount++;
 					map[playerY][playerX] = 0; // 아이템 먹고 위치 초기화
+				}
+				else if (playerX == exitX && playerY == exitY)
+				{
+					Exit = true; // 출구에 도달하면 게임 종료
 				}
 			}
 
@@ -118,6 +131,10 @@ int main()
 					itemCount++;
 					map[playerY][playerX] = 0; // 아이템 먹고 위치 초기화
 				}
+				else if (playerX == exitX && playerY == exitY)
+				{
+					Exit = true; // 출구에 도달하면 게임 종료
+				}
 
 			}
 			else
@@ -126,21 +143,31 @@ int main()
 			}
 		}
 
+		if (itemCount == 4)	// 아이템을 다 먹으면 출구가 생성된다.
+		{
+			
+			map[exitY][exitX] = 0;
+			//Exit = true;
+			SetCurPosition(25, 0);
+			printf("출구가 활성화 되었습니다!");
+			ShowMap();	// 맵 다시 그리기
+			
+		}
+
 		SetCurPosition(playerX, playerY);
+		SetColor(0, 2);
 		printf("옷");
+		SetColor(0, 15);
+
 
 		Sleep(100);
 
-		if (itemCount == 4)	// 아이템을 다 먹으면 출구가 생겨야 하는데
-		{
-			SetCurPosition(20, 19);
-			printf(" ");
-			//ShowMap2();
-			
-		}
+		
 		if(Exit)
 		{
-			SetCurPosition(30, 30);
+			system("cls");
+			SetCurPosition(25, 10);
+			SetColor(0, 4);
 			printf("Game Over!");	// 출구로 나가면 나올 코드
 
 			break;

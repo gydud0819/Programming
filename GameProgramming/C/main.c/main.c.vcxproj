@@ -129,13 +129,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Console.c" />
-    <ClCompile Include="Exit.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="MapBoder.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h" />
-    <ClInclude Include="Exit.h" />
     <ClInclude Include="MapBoder.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
