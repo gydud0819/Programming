@@ -4,4 +4,4 @@
 #include <stdbool.h>
 
 void ShowMap();
-
+void ShowMap2();

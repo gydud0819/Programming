@@ -20,7 +20,7 @@
 void SetCurPosition(int x, int y)
 {
 	COORD pos;
-	pos.X = x * 2;
+	pos.X = x * 2;	// x는 x2를 해야 한칸이 된다.
 	pos.Y = y;
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 }
@@ -147,10 +147,9 @@ int main()
 		{
 			
 			map[exitY][exitX] = 0;
-			//Exit = true;
 			SetCurPosition(25, 0);
 			printf("출구가 활성화 되었습니다!");
-			ShowMap();	// 맵 다시 그리기
+			ShowMap();	// 출구를 생성하기 위해 맵 다시 그리게 맵 함수를 한번 더 사용했다.
 			
 		}
 
@@ -168,7 +167,7 @@ int main()
 			system("cls");
 			SetCurPosition(25, 10);
 			SetColor(0, 4);
-			printf("Game Over!");	// 출구로 나가면 나올 코드
+			printf("Game Celar!");	// 출구로 나가면 Game Clear가 뜨면서 종료가 된다.
 
 			break;
 		}
