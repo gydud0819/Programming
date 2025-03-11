@@ -44,14 +44,14 @@ void ShowMap()
 				if (x == 0 || x == 19 || y == 0 || y == 19)
 				{
 					SetCurPosition(x, y);
-					SetColor(0, 15);
+					SetColor(0, 15);	// 미로 외벽 색 구분하기
 					printf("■");
-					SetColor(0, 15);
+					SetColor(0, 15);	// 위와 같다.
 				}
 				else
 				{
 					SetCurPosition(x, y);
-					SetColor(0, 0);
+					SetColor(0, 0);		// 미로 내부 색을 콘솔 창과 동일하게 하여 투명한 것 처럼 설정했다.
 				}
 				break;
 			case 0:
