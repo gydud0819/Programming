@@ -1,11 +1,11 @@
 /*
-* 작성일	: 2025-03-08 ~ 2025-03-11
-* 작성자	: 박효영
-* 주제	: 미로 탈출 게임
+- 작성일	: 2025-03-08 ~ 2025-03-11
+- 작성자	: 박효영
+- 주제	: 미로 탈출 게임
 */
 
 /*
-* 윈도우 콘솔 배경 및 글자 색 변경 방법
+- 윈도우 콘솔 배경 및 글자 색 변경 방법
 */
 
 #include <stdio.h>
@@ -31,11 +31,10 @@ void HideCursor()
 	CONSOLE_CURSOR_INFO info;
 	info.bVisible = false; // 안보이게
 	info.dwSize = 1; //커서의 크기값
-
 	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
 }
 
-extern int map[20][20];	// 미로의 크기 
+extern int map[20][20];	// 미로의 크기
 
 int itemCount = 0;	// 아이템 개수
 
@@ -54,12 +53,12 @@ int main()
 	SetCurPosition(playerX, playerY);
 	printf("옷");
 
-	
+
 	while (true)
 	{
 		if (_kbhit())
 		{
-			SetCurPosition(playerX, playerY);	// 잔상이 남지 않게 한다. 
+			SetCurPosition(playerX, playerY);	// 잔상이 남지 않게 한다.
 			printf("  ");
 			// 화살표 입력 인식 넣기
 
@@ -85,7 +84,7 @@ int main()
 			if (GetAsyncKeyState(VK_DOWN) & 0x8000) // 아래
 			{
 				playerY++;
-				if (map[playerY][playerX] == 1)		// 플레이어가 벽을 뚫는 사태가 발생하면 안되기에 
+				if (map[playerY][playerX] == 1)		// 플레이어가 벽을 뚫는 사태가 발생하면 안되기에
 					// 플레이어가 벽에 닿이면 다시 뒤로 밀려나는 것처럼 뚫지 못하게 설정하였다.
 				{
 					playerY--;
@@ -139,18 +138,16 @@ int main()
 			}
 			else
 			{
-				// x,y 가 움직이지 않을때 그대로 
+				// x,y 가 움직이지 않을때 그대로
 			}
 		}
 
 		if (itemCount == 4)	// 아이템을 다 먹으면 출구가 생성된다.
 		{
-			
 			map[exitY][exitX] = 0;
 			SetCurPosition(25, 0);
 			printf("출구가 활성화 되었습니다!");
 			ShowMap();	// 출구를 생성하기 위해 맵 함수를 한 번 더 호출했다.
-			
 		}
 
 		SetCurPosition(playerX, playerY);
@@ -161,8 +158,8 @@ int main()
 
 		Sleep(100);
 
-		
-		if(Exit)
+
+		if (Exit)
 		{
 			system("cls");
 			SetCurPosition(25, 10);
