@@ -1,2 +1,57 @@
 ﻿  main.c
-  main.c.vcxproj -> C:\Users\DPC\Desktop\Programming\GameProgramming\C\Cstudy\x64\Debug\FirstGame.exe
+  WindowAPI.c
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(24,6): error C2371: 'Exit': 재정의. 기본 형식이 다릅니다.
+      C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.h(38,2):
+      'Exit' 선언을 참조하십시오.
+  
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(36,17): warning C4047: '함수': 'Player *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(36,17): warning C4024: 'SetCurPosition': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(36,26): warning C4047: '함수': 'Item *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(36,26): warning C4024: 'SetCurPosition': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(44,19): warning C4047: '함수': 'Player *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(44,19): warning C4024: 'SetCurPosition': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(44,28): warning C4047: '함수': 'Item *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(44,28): warning C4024: 'SetCurPosition': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(63,11): error C2513: '_EXIT': '=' 앞에 변수를 선언하지 않았습니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(82,11): error C2513: '_EXIT': '=' 앞에 변수를 선언하지 않았습니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(100,11): error C2513: '_EXIT': '=' 앞에 변수를 선언하지 않았습니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(118,11): error C2513: '_EXIT': '=' 앞에 변수를 선언하지 않았습니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(131,19): warning C4047: '함수': 'Player *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(131,19): warning C4024: 'SetCurPosition': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(136,18): warning C4047: '함수': 'Player *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(136,18): warning C4024: 'SetCurPosition': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(136,27): warning C4047: '함수': 'Item *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(136,27): warning C4024: 'SetCurPosition': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(145,7): error C2275: 'Exit': 형식 대신 식이 필요합니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(148,19): warning C4047: '함수': 'Player *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(148,19): warning C4024: 'SetCurPosition': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(148,23): warning C4047: '함수': 'Item *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\main.c(148,23): warning C4024: 'SetCurPosition': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(26,6): warning C4029: 선언된 정식 매개 변수 목록이 정의와 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(30,27): warning C4047: '함수': 'Player *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(30,27): warning C4024: 'SetCurPosition': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(30,47): warning C4047: '함수': 'Item *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(30,47): warning C4024: 'SetCurPosition': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(44,5): error C2065: 'itemCount': 선언되지 않은 식별자입니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(49,10): error C2513: '_EXIT': '=' 앞에 변수를 선언하지 않았습니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(63,5): error C2065: 'itemCount': 선언되지 않은 식별자입니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(68,10): error C2513: '_EXIT': '=' 앞에 변수를 선언하지 않았습니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(81,5): error C2065: 'itemCount': 선언되지 않은 식별자입니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(86,10): error C2513: '_EXIT': '=' 앞에 변수를 선언하지 않았습니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(92,4): error C2065: 'playerX': 선언되지 않은 식별자입니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(93,12): error C2065: 'playerY': 선언되지 않은 식별자입니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(93,21): error C2065: 'playerX': 선언되지 않은 식별자입니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(95,5): error C2065: 'playerX': 선언되지 않은 식별자입니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(97,17): error C2065: 'playerY': 선언되지 않은 식별자입니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(97,26): error C2065: 'playerX': 선언되지 않은 식별자입니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(99,5): error C2065: 'itemCount': 선언되지 않은 식별자입니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(100,9): error C2065: 'playerY': 선언되지 않은 식별자입니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(100,18): error C2065: 'playerX': 선언되지 않은 식별자입니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(102,13): error C2065: 'playerX': 선언되지 않은 식별자입니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(102,24): error C2065: 'exitX': 선언되지 않은 식별자입니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(102,33): error C2065: 'playerY': 선언되지 않은 식별자입니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(102,44): error C2065: 'exitY': 선언되지 않은 식별자입니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(104,10): error C2513: '_EXIT': '=' 앞에 변수를 선언하지 않았습니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(115,25): warning C4028: 정식 매개 변수 1이(가) 선언과 다릅니다.
+C:\Users\DPC\Desktop\Programming\GameProgramming\C\main.c\WindowAPI.c(115,32): warning C4028: 정식 매개 변수 2이(가) 선언과 다릅니다.
+  코드를 생성하고 있습니다...

@@ -5,37 +5,45 @@
 #include <conio.h>
 #include <stdbool.h>
 #include "MapBoder.h"
+#include "Console.h"
 
 typedef struct _POS
 {
-	int PlayerX;
+	int playerX;
 	int playerY;
 
-	int exitX;
-	int exitY;
 }POS;
 
 typedef struct _Player
 {
 	char* playerShape;
 	POS;
+	Exit;
+	//COORD pos;
 }Player;
 
 typedef struct _ITEM
 {
 	char* itemShape;
+	int* itemCount;
 	POS;
+	//COORD pos;
 
-};
+}Item;
 
 typedef struct _EXIT
 {
+	int exitX;
+	int exitY;
 	POS;
-	bool Exit;
-};
+	//COORD pos;
+	bool exit;
+}Exit;
 
-void SetCurPosition(int x, int y);	//커서 이동 함수
+void SetCurPosition(Player* playerptr, Item* itemptr);	//커서 이동 함수
 
 void HideCursor();	//커서 숨기기 함수
 
-void PlayerInputKey();
+void PlayerInputKey(Player* playerptr, Item* itemptr);
+
+void MazeExit();	// 미로 출구 함수
