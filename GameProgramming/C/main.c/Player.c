@@ -5,7 +5,8 @@ extern int map[20][20];	// 미로의 크기
 
 //int exitX = 19;		// 출구의 X 좌표
 //int exitY = 18;		// 출구의 Y 좌표
-Exit gameExit = { {19, 18}, true };
+
+Exit gameExit = { {19, 18 }, true };	// 출구의 위치
 
 void MovePlayer(Player* playerptr, const Exit* exitptr)
 {
@@ -30,7 +31,7 @@ void MovePlayer(Player* playerptr, const Exit* exitptr)
 			}
 			else if (playerptr->playerPos.posX == exitptr->exitPos.posX && playerptr->playerPos.posY == exitptr->exitPos.posY)
 			{
-				playerptr->mazeExit = true; // 출구에 도달하면 게임 종료
+				playerptr->NextStage = true; // 다음 스테이지로 이동
 			}
 		}
 
@@ -98,7 +99,7 @@ void MovePlayer(Player* playerptr, const Exit* exitptr)
 		{
 			map[exitptr->exitPos.posY][exitptr->exitPos.posX] = 0;
 			SetCurPosition(25, 0);
-			printf("출구가 활성화 되었습니다!");
+			printf("다음 스테이지로 넘어갑니다!");	// 다음 스테이지로 넘어갑니다로 수정 예정
 			ShowMap2();	// 출구를 생성하기 위해 맵 함수를 한 번 더 호출했다.
 		}
 
@@ -109,17 +110,9 @@ void MovePlayer(Player* playerptr, const Exit* exitptr)
 
 
 		Sleep(100);
-
-
-		//if (exit)
-		//{
-		//	system("cls");
-		//	SetCurPosition(25, 10);
-		//	SetColor(0, 4);
-		//	printf("Game Celar!");	// 출구로 나가면 Game Clear가 뜨면서 종료가 된다.
-
-		//	break;
-		//}
+			
 	}
 
 }
+
+

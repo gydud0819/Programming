@@ -28,12 +28,11 @@ typedef struct _PLAYER	// 플레이어 구조체
 {
 	char* playerShape;
 	Pos playerPos;
+	BOOL NextStage;
 	BOOL mazeExit;
 	int itemCount;
 }Player;
 
 
+void MovePlayer(Player* playerptr, const Exit* exitptr);		// 플레이어가 콘솔창 내에서 움직이는 함수
 
-
-void MovePlayer(Player* playerptr, const Exit* exitptr);
-void PlayerInputKey(Player* playerptr, const Exit* exitptr);
