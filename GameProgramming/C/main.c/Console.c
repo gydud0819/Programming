@@ -25,3 +25,9 @@ void HideCursor()
 	info.dwSize = 1; //커서의 크기값
 	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
 }
+
+void ClearScreen()
+{
+	COORD cursorPosition = { 0, 0 };
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cursorPosition);
+}

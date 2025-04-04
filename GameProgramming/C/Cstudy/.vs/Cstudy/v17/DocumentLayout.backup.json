@@ -1,27 +1,27 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\Cstudy\\",
+  "WorkspaceRootPath": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\Cstudy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{39F92A0D-1CF4-46C4-B770-DBC686AEC06F}|..\\main.c\\main.c.vcxproj|C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Player.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{39F92A0D-1CF4-46C4-B770-DBC686AEC06F}|..\\main.c\\main.c.vcxproj|C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\MapBoder.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39F92A0D-1CF4-46C4-B770-DBC686AEC06F}|..\\main.c\\main.c.vcxproj|C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{39F92A0D-1CF4-46C4-B770-DBC686AEC06F}|..\\main.c\\main.c.vcxproj|C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\MapBoder.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39F92A0D-1CF4-46C4-B770-DBC686AEC06F}|..\\main.c\\main.c.vcxproj|C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{39F92A0D-1CF4-46C4-B770-DBC686AEC06F}|..\\main.c\\main.c.vcxproj|C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Player.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39F92A0D-1CF4-46C4-B770-DBC686AEC06F}|..\\main.c\\main.c.vcxproj|C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\MapBoder.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{39F92A0D-1CF4-46C4-B770-DBC686AEC06F}|..\\main.c\\main.c.vcxproj|C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39F92A0D-1CF4-46C4-B770-DBC686AEC06F}|..\\main.c\\main.c.vcxproj|C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\MapBoder.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{39F92A0D-1CF4-46C4-B770-DBC686AEC06F}|..\\main.c\\main.c.vcxproj|C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39F92A0D-1CF4-46C4-B770-DBC686AEC06F}|..\\main.c\\main.c.vcxproj|C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{39F92A0D-1CF4-46C4-B770-DBC686AEC06F}|..\\main.c\\main.c.vcxproj|C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Console.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39F92A0D-1CF4-46C4-B770-DBC686AEC06F}|..\\main.c\\main.c.vcxproj|C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Console.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{39F92A0D-1CF4-46C4-B770-DBC686AEC06F}|..\\main.c\\main.c.vcxproj|C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Console.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,97 +31,101 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Console.h",
+              "DocumentMoniker": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Console.h",
+              "RelativeDocumentMoniker": "..\\main.c\\Console.h",
+              "ToolTip": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Console.h",
+              "RelativeToolTip": "..\\main.c\\Console.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-04T13:08:11.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Player.c",
+              "DocumentMoniker": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Player.c",
+              "RelativeDocumentMoniker": "..\\main.c\\Player.c",
+              "ToolTip": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Player.c",
+              "RelativeToolTip": "..\\main.c\\Player.c",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAACAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-04-04T11:16:48.463Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Player.c",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Player.c",
-              "RelativeDocumentMoniker": "..\\main.c\\Player.c",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Player.c",
-              "RelativeToolTip": "..\\main.c\\Player.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Title": "MapBoder.c",
+              "DocumentMoniker": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\MapBoder.c",
+              "RelativeDocumentMoniker": "..\\main.c\\MapBoder.c",
+              "ToolTip": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\MapBoder.c",
+              "RelativeToolTip": "..\\main.c\\MapBoder.c",
+              "ViewState": "AgIAAOsAAAAAAAAAAAAAACkAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-04-04T06:56:59.061Z",
+              "WhenOpened": "2025-04-04T11:16:45.66Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Player.h",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Player.h",
-              "RelativeDocumentMoniker": "..\\main.c\\Player.h",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Player.h",
-              "RelativeToolTip": "..\\main.c\\Player.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Title": "MapBoder.h",
+              "DocumentMoniker": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\MapBoder.h",
+              "RelativeDocumentMoniker": "..\\main.c\\MapBoder.h",
+              "ToolTip": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\MapBoder.h",
+              "RelativeToolTip": "..\\main.c\\MapBoder.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-04T06:56:58.197Z",
+              "WhenOpened": "2025-04-04T11:16:44.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\main.c",
+              "RelativeDocumentMoniker": "..\\main.c\\main.c",
+              "ToolTip": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\main.c",
+              "RelativeToolTip": "..\\main.c\\main.c",
+              "ViewState": "AgIAABcAAAAAAAAAAAAcwCgAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-04-04T11:16:05.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Player.h",
+              "RelativeDocumentMoniker": "..\\main.c\\Player.h",
+              "ToolTip": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Player.h",
+              "RelativeToolTip": "..\\main.c\\Player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-04T11:16:47.358Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Console.c",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Console.c",
+              "DocumentMoniker": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Console.c",
               "RelativeDocumentMoniker": "..\\main.c\\Console.c",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Console.c",
+              "ToolTip": "C:\\Users\\DPC\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Console.c",
               "RelativeToolTip": "..\\main.c\\Console.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAgwB8AAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-04-04T06:56:56.086Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Console.h",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Console.h",
-              "RelativeDocumentMoniker": "..\\main.c\\Console.h",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\Console.h",
-              "RelativeToolTip": "..\\main.c\\Console.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-04T06:56:54.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MapBoder.c",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\MapBoder.c",
-              "RelativeDocumentMoniker": "..\\main.c\\MapBoder.c",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\MapBoder.c",
-              "RelativeToolTip": "..\\main.c\\MapBoder.c",
-              "ViewState": "AgIAAPMAAAAAAAAAAAAAAPMAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-04-04T06:56:50.054Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MapBoder.h",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\MapBoder.h",
-              "RelativeDocumentMoniker": "..\\main.c\\MapBoder.h",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\MapBoder.h",
-              "RelativeToolTip": "..\\main.c\\MapBoder.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-04T06:56:48.817Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "main.c",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\main.c",
-              "RelativeDocumentMoniker": "..\\main.c\\main.c",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\Programming\\GameProgramming\\C\\main.c\\main.c",
-              "RelativeToolTip": "..\\main.c\\main.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-04-04T06:56:28.334Z",
+              "WhenOpened": "2025-04-04T13:08:27.872Z",
               "EditorCaption": ""
             }
           ]

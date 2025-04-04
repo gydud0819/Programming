@@ -31,6 +31,7 @@ typedef struct _PLAYER	// 플레이어 구조체
 	BOOL NextStage;
 	BOOL mazeExit;
 	int itemCount;
+	int CurrentStage;
 }Player;
 
 

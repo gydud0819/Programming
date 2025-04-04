@@ -12,3 +12,5 @@ void SetColor(unsigned char _BackGroundColor, unsigned char _Textcolor);
 void SetCurPosition(int x, int y);
 
 void HideCursor();
+
+void ClearScreen();

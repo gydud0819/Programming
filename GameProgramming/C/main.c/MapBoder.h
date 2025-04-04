@@ -1,11 +1,12 @@
 #pragma once
 #include <stdio.h>
 #include <stdbool.h>
+#include "Player.h"
 
-#define 가로 20
-#define 세로 20
+#define 가로 30
+#define 세로 30
 
-
+extern char Stage2[30][81];
 
 /*\
 * 내일 할거
@@ -22,7 +23,9 @@
 
 
 void ShowStage1();		// 맵 내부가 보이는 함수
-void ClearStage1();	// 맵 내부가 보이지 않는 함수
+void ShowClearStage1();	// 맵 내부가 보이지 않는 함수
 void ShowMap2();	// 아이템을 다 먹은 후 출구를 나타내는 함수
 
 void ShowStage2();	// 두번째 맵 함수
+
+void InitStage2(Player* playerptr);
