@@ -17,6 +17,12 @@ typedef struct _EXIT	// 출구 구조체
 	bool exit;
 }Exit;
 
+typedef struct _STAGE
+{
+	Pos stagePos;
+	bool nextStage;
+}Stage;
+
 typedef struct _ITEM	// 아이템 구조체
 {
 	char* itemShape;
@@ -30,10 +36,15 @@ typedef struct _PLAYER	// 플레이어 구조체
 	Pos playerPos;
 	BOOL NextStage;
 	BOOL mazeExit;
-	int itemCount;
+	int heartCount;
+	int starCount;
 	int CurrentStage;
+	int prevPosX;      // ◀◀◀ 추가된 부분
+	int prevPosY;      // ◀◀◀ 추가된 부분
 }Player;
 
 
+
 void MovePlayer(Player* playerptr, const Exit* exitptr);		// 플레이어가 콘솔창 내에서 움직이는 함수
+
 

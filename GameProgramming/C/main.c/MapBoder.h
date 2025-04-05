@@ -6,7 +6,10 @@
 #define 가로 30
 #define 세로 30
 
-extern char Stage2[30][81];
+#define 가로2 30
+#define 세로2 30
+
+
 
 /*\
 * 내일 할거
@@ -16,16 +19,12 @@ extern char Stage2[30][81];
 * 4. 게임 시작 종료 로고 만들기 
 */
 
-//typedef struct _MAP
-//{
-//
-//}Map, Stage;
-
 
 void ShowStage1();		// 맵 내부가 보이는 함수
 void ShowClearStage1();	// 맵 내부가 보이지 않는 함수
-void ShowMap2();	// 아이템을 다 먹은 후 출구를 나타내는 함수
 
 void ShowStage2();	// 두번째 맵 함수
 
-void InitStage2(Player* playerptr);
+void ShowExit();	// 아이템을 다 먹은 후 출구를 나타내는 함수
+
+void ShowStageWithOffset(int offsetX, int offsetY, int (*map)[세로]);

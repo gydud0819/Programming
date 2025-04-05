@@ -1,15 +1,22 @@
 #include "Player.h"
 #include "MapBoder.h"
 
-extern int map[20][20];	// 미로의 크기
+extern int Map1[가로][세로];	// 미로의 크기
+extern int Map2[가로2][세로2];
 
-//int exitX = 19;		// 출구의 X 좌표
-//int exitY = 18;		// 출구의 Y 좌표
-
-Exit gameExit = { {19, 18 }, true };	// 출구의 위치
+Exit NextStage = { {29, 28 }, true };	// 스테이지2로 넘어가는 스테이지1 위치
+Exit gameExit = { {29, 2}, true }; // 스테이지2 출구 좌표
 
 void MovePlayer(Player* playerptr, const Exit* exitptr)
 {
+	
+	// 이전 위치 저장하기
+	playerptr->prevPosX = playerptr->playerPos.posX;
+	playerptr->prevPosY = playerptr->playerPos.posY;
+
+	// 현재 스테이지에 따라 사용할 맵 결정
+	int (*currentMap)[세로] = (playerptr->CurrentStage == 1) ? Map1 : Map2;
+	
 	if (_kbhit())
 	{
 		SetCurPosition(playerptr->playerPos.posX, playerptr->playerPos.posY);	// 잔상이 남지 않게 한다.
@@ -20,97 +27,142 @@ void MovePlayer(Player* playerptr, const Exit* exitptr)
 		if (GetAsyncKeyState(VK_UP) & 0x8000) // 위
 		{
 			playerptr->playerPos.posY--;
-			if (map[playerptr->playerPos.posY][playerptr->playerPos.posX] == 1)
+			if (currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] == 1)
 			{
 				playerptr->playerPos.posY++;
 			}
-			else if (map[playerptr->playerPos.posY][playerptr->playerPos.posX] == 2) // 아이템 위치
+			else if (currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] == 2) // 아이템 위치
 			{
-				playerptr->itemCount++;
-				map[playerptr->playerPos.posY][playerptr->playerPos.posX] = 0; // 아이템 먹고 위치 초기화
+				playerptr->heartCount++;
+				currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] = 0; // 아이템 먹고 위치 초기화
 			}
-			else if (playerptr->playerPos.posX == exitptr->exitPos.posX && playerptr->playerPos.posY == exitptr->exitPos.posY)
+			else if (currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] == 3) // 아이템 위치
 			{
-				playerptr->NextStage = true; // 다음 스테이지로 이동
+				playerptr->starCount++;
+				currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] = 0; // 아이템 먹고 위치 초기화
 			}
+
 		}
 
 		if (GetAsyncKeyState(VK_DOWN) & 0x8000) // 아래
 		{
 			playerptr->playerPos.posY++;
-			if (map[playerptr->playerPos.posY][playerptr->playerPos.posX] == 1)		// 플레이어가 벽을 뚫는 사태가 발생하면 안되기에
+			if (currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] == 1)		// 플레이어가 벽을 뚫는 사태가 발생하면 안되기에
 				// 플레이어가 벽에 닿이면 다시 뒤로 밀려나는 것처럼 뚫지 못하게 설정하였다.
 			{
 				playerptr->playerPos.posY--;
 			}
-			else if (map[playerptr->playerPos.posY][playerptr->playerPos.posX] == 2) // 아이템 위치
+			else if (currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] == 2) // 아이템 위치
 			{
-				playerptr->itemCount++;
-				map[playerptr->playerPos.posY][playerptr->playerPos.posX] = 0; // 아이템 먹고 위치 초기화
+				playerptr->heartCount++;
+				currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] = 0; // 아이템 먹고 위치 초기화
 			}
-			else if (playerptr->playerPos.posX == exitptr->exitPos.posX && playerptr->playerPos.posY == exitptr->exitPos.posY)
+			else if (currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] == 3) // 아이템 위치
 			{
-				playerptr->mazeExit = true; // 출구에 도달하면 게임 종료
+				playerptr->starCount++;
+				currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] = 0; // 아이템 먹고 위치 초기화
 			}
+
 		}
 
 		if (GetAsyncKeyState(VK_LEFT) & 0x8000) // 좌
 		{
 			playerptr->playerPos.posX--;
-			if (map[playerptr->playerPos.posY][playerptr->playerPos.posX] == 1)	// x의 값 +2 (== 1칸이동)
+			if (currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] == 1)	// x의 값 +2 (== 1칸이동)
 			{
 				playerptr->playerPos.posX++;
 			}
-			else if (map[playerptr->playerPos.posY][playerptr->playerPos.posX] == 2) // 아이템 위치
+			else if (currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] == 2) // 아이템 위치
 			{
-				playerptr->itemCount++;
-				map[playerptr->playerPos.posY][playerptr->playerPos.posX] = 0; // 아이템 먹고 위치 초기화
+				playerptr->heartCount++;
+				currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] = 0; // 아이템 먹고 위치 초기화
 			}
-			else if (playerptr->playerPos.posX == exitptr->exitPos.posX && playerptr->playerPos.posY == exitptr->exitPos.posY)
+			else if (currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] == 3) // 아이템 위치
 			{
-				playerptr->mazeExit = true; // 출구에 도달하면 게임 종료
+				playerptr->starCount++;
+				currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] = 0; // 아이템 먹고 위치 초기화
 			}
+
 		}
 
 		if (GetAsyncKeyState(VK_RIGHT) & 0x8000) // 우
 		{
 			playerptr->playerPos.posX++;
-			if (map[playerptr->playerPos.posY][playerptr->playerPos.posX] == 1)
+			if (currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] == 1)
 			{
 				playerptr->playerPos.posX--;
 			}
-			else if (map[playerptr->playerPos.posY][playerptr->playerPos.posX] == 2) // 아이템 위치
+			else if (currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] == 2) // 아이템 위치
 			{
-				playerptr->itemCount++;
-				map[playerptr->playerPos.posY][playerptr->playerPos.posX] = 0; // 아이템 먹고 위치 초기화
+				playerptr->heartCount++;
+				currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] = 0; // 아이템 먹고 위치 초기화
 			}
-			else if (playerptr->playerPos.posX == exitptr->exitPos.posX && playerptr->playerPos.posY == exitptr->exitPos.posY)
+			else if (currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] == 3) // 아이템 위치
 			{
-				playerptr->mazeExit = true;
+				playerptr->starCount++;
+				currentMap[playerptr->playerPos.posY][playerptr->playerPos.posX] = 0; // 아이템 먹고 위치 초기화
+			}
 
-			}
-			else
-			{
-				// x,y 가 움직이지 않을때 그대로
-			}
 		}
 
-		if (playerptr->itemCount == 4)	// 아이템을 다 먹으면 출구가 생성된다.
-		{
-			map[exitptr->exitPos.posY][exitptr->exitPos.posX] = 0;
-			SetCurPosition(25, 0);
-			printf("다음 스테이지로 넘어갑니다!");	// 다음 스테이지로 넘어갑니다로 수정 예정
-			ShowMap2();	// 출구를 생성하기 위해 맵 함수를 한 번 더 호출했다.
-		}
-
+		// 2. 새 위치에 플레이어 그리기
 		SetCurPosition(playerptr->playerPos.posX, playerptr->playerPos.posY);
 		SetColor(0, 2);
 		printf("옷");
 		SetColor(0, 15);
 
+		// 3. 이전 위치 업데이트 (다음 프레임을 위해)
+		playerptr->prevPosX = playerptr->playerPos.posX;
+		playerptr->prevPosY = playerptr->playerPos.posY;
 
 		Sleep(100);
-			
+
+	}
+
+	if (playerptr->CurrentStage == 1)
+	{
+		if (playerptr->heartCount >= 5)
+		{
+			currentMap[NextStage.exitPos.posY][NextStage.exitPos.posX] = 0; 
+			SetCurPosition(30, 28);
+			printf("←");
+			SetCurPosition(40, 2);
+			printf("다음 스테이지로 이동합니다!\n");
+			//ShowExit(29, 28); // 출구 표시
+		}
+	}
+
+	if (playerptr->playerPos.posX == 29 &&
+		playerptr->playerPos.posY == 28)
+	{
+		// 스테이지 전환 로직
+		playerptr->CurrentStage = 2;
+		playerptr->playerPos.posX = 2;  // 스테이지 2 시작 좌표
+		playerptr->playerPos.posY = 28;	// 스테이지 2 시작 좌표
+		playerptr->starCount = 0;		 // 별 카운트 리셋
+		system("cls");
+		ShowStage2();
+		return; // 함수 즉시 종료
+	}
+	else if (playerptr->CurrentStage == 2)
+	{
+		if (playerptr->starCount >= 5)		// 별 5개 먹으면 출구 열리게
+		{
+			currentMap[gameExit.exitPos.posY][gameExit.exitPos.posX] = 0;
+			SetCurPosition(30, 2);
+			printf("←");
+			SetCurPosition(40, 2);
+			printf("출구가 활성화되었습니다!\n");
+		}
+		// 2. 출구 도착 감지
+		if (playerptr->playerPos.posX == gameExit.exitPos.posX &&
+			playerptr->playerPos.posY == gameExit.exitPos.posY)
+		{
+			system("cls");
+			SetCurPosition(25, 10);
+			printf("★★★★★ Game Clear ★★★★★");
+			exit(0); // 게임 완전 종료
+		}
 	}
 
 }
