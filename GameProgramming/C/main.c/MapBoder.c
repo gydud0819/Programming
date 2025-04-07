@@ -40,7 +40,7 @@ int Map1[가로][세로] =
 
 };
 
-void ShowStage1()		// 맵 내부가 보이는 함수 
+void ShowStage1(int* (*Stage)[가로 + 1], COORD pos)		// 맵 내부가 보이는 함수 
 {
 	for (int y = 0; y < 세로; y++)
 	{
@@ -176,7 +176,7 @@ int Map2[가로2][세로2] =
 
 };
 
-void ShowStage2()	// 2번째 스테이지
+void ShowStage2(int* (*Stage)[가로2 + 1], COORD Nextpos)	// 2번째 스테이지
 {
 	for (int y = 0; y < 세로2; y++)
 	{
@@ -215,7 +215,7 @@ void ShowStage2()	// 2번째 스테이지
 
 			case 3:
 				SetCurPosition(x, y);
-				SetColor(0, 5);
+				SetColor(0, 6);
 				printf("★");
 				SetColor(0, 15);
 				break;

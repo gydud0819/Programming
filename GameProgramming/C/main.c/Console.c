@@ -26,6 +26,8 @@ void HideCursor()
 	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
 }
 
+
+
 void ClearScreen()
 {
 	COORD cursorPosition = { 0, 0 };

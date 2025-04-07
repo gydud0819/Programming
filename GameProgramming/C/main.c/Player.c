@@ -9,7 +9,7 @@ Exit gameExit = { {29, 2}, true }; // 스테이지2 출구 좌표
 
 void MovePlayer(Player* playerptr, const Exit* exitptr)
 {
-	
+	COORD stagePos = { 50,0 };
 	// 이전 위치 저장하기
 	playerptr->prevPosX = playerptr->playerPos.posX;
 	playerptr->prevPosY = playerptr->playerPos.posY;
@@ -141,7 +141,8 @@ void MovePlayer(Player* playerptr, const Exit* exitptr)
 		playerptr->playerPos.posY = 28;	// 스테이지 2 시작 좌표
 		playerptr->starCount = 0;		 // 별 카운트 리셋
 		system("cls");
-		ShowStage2();
+		COORD stagePos = { 50,0 };
+		ShowStage2(Stage2, stagePos);
 		return; // 함수 즉시 종료
 	}
 	else if (playerptr->CurrentStage == 2)

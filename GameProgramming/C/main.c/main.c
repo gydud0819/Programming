@@ -7,8 +7,8 @@ extern int Map2[가로2][세로2];	// 미로의 크기
 
 int main()
 {
-		
-	ShowStage1();			// 미로 내부가 보이는 맵
+	COORD stagePos = { 50,0 };
+	ShowStage1(Stage1, stagePos);			// 미로 내부가 보이는 맵
 	//ShowClearStage1();			// 미로 내부가 보이지 않는 맵
 	//ShowStage2();			// 두번째 스테이지 맵
 	HideCursor();
