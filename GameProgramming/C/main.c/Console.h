@@ -13,3 +13,4 @@ void SetCurPosition(int x, int y);
 
 void HideCursor();
 
+void Startscreen();		// 게임 시작 화면 함수 

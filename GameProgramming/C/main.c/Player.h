@@ -39,11 +39,9 @@ typedef struct _PLAYER	// 플레이어 구조체
 	int heartCount;
 	int starCount;
 	int CurrentStage;
-	int prevPosX;      // ◀◀◀ 추가된 부분
-	int prevPosY;      // ◀◀◀ 추가된 부분
+	int prevPosX;      
+	int prevPosY;      
 }Player;
-
-
 
 void MovePlayer(Player* playerptr, const Exit* exitptr);		// 플레이어가 콘솔창 내에서 움직이는 함수
 

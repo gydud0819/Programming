@@ -38,6 +38,8 @@ void ShowStage1(int* (*Stage)[가로 + 1], COORD pos);	// 맵 내부가 보이는 함수
 void ShowClearStage1();	// 맵 내부가 보이지 않는 함수
 
 void ShowStage2(int* (*Stage)[가로2 + 1], COORD Nextpos);	// 두번째 맵 함수
+void ShowClearStage2();		// 맵 내부가 보이지 않는 2번째 스테이지 함수
+
 
 void ShowExit();	// 아이템을 다 먹은 후 출구를 나타내는 함수
 

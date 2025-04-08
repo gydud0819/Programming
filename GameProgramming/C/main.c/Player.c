@@ -1,8 +1,8 @@
 #include "Player.h"
 #include "MapBoder.h"
 
-extern int Map1[가로][세로];	// 미로의 크기
-extern int Map2[가로2][세로2];
+extern int Map1[가로][세로];		// 1번 스테이지의 크기
+extern int Map2[가로2][세로2];	// 2번 스테이지의 크기
 
 Exit NextStage = { {29, 28 }, true };	// 스테이지2로 넘어가는 스테이지1 위치
 Exit gameExit = { {29, 2}, true }; // 스테이지2 출구 좌표
@@ -15,7 +15,7 @@ void MovePlayer(Player* playerptr, const Exit* exitptr)
 	playerptr->prevPosY = playerptr->playerPos.posY;
 
 	// 현재 스테이지에 따라 사용할 맵 결정
-	int (*currentMap)[세로] = (playerptr->CurrentStage == 1) ? Map1 : Map2;
+	int (*currentMap)[세로] = (playerptr->CurrentStage == 1) ? Map1 : Map2;	// 삼항 연산자 사용
 	
 	if (_kbhit())
 	{
@@ -126,9 +126,8 @@ void MovePlayer(Player* playerptr, const Exit* exitptr)
 			currentMap[NextStage.exitPos.posY][NextStage.exitPos.posX] = 0; 
 			SetCurPosition(30, 28);
 			printf("←");
-			SetCurPosition(40, 2);
+			SetCurPosition(40, 1);
 			printf("다음 스테이지로 이동합니다!\n");
-			//ShowExit(29, 28); // 출구 표시
 		}
 	}
 
@@ -137,12 +136,13 @@ void MovePlayer(Player* playerptr, const Exit* exitptr)
 	{
 		// 스테이지 전환 로직
 		playerptr->CurrentStage = 2;
-		playerptr->playerPos.posX = 2;  // 스테이지 2 시작 좌표
+		playerptr->playerPos.posX = 1;  // 스테이지 2 시작 좌표
 		playerptr->playerPos.posY = 28;	// 스테이지 2 시작 좌표
 		playerptr->starCount = 0;		 // 별 카운트 리셋
 		system("cls");
 		COORD stagePos = { 50,0 };
-		ShowStage2(Stage2, stagePos);
+		//ShowStage2(Stage2, stagePos);
+		ShowClearStage2();				// 맵 내부가 보이지 않는 함수
 		return; // 함수 즉시 종료
 	}
 	else if (playerptr->CurrentStage == 2)
@@ -161,6 +161,7 @@ void MovePlayer(Player* playerptr, const Exit* exitptr)
 		{
 			system("cls");
 			SetCurPosition(25, 10);
+			//SetColor(0, 2);
 			printf("★★★★★ Game Clear ★★★★★");
 			exit(0); // 게임 완전 종료
 		}

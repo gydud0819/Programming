@@ -228,6 +228,58 @@ void ShowStage2(int* (*Stage)[가로2 + 1], COORD Nextpos)	// 2번째 스테이지
 	}
 }
 
+void ShowClearStage2()
+{
+	for (int y = 0; y < 세로2; y++)
+	{
+		for (int x = 0; x < 가로2; x++)
+		{
+			switch (Map2[y][x]) //맵 좌표 순서 y먼저인 것 기억하기
+			{
+			case 1:
+				if (x == 0 || x == 29 || y == 0 || y == 29)
+				{
+					SetCurPosition(x, y);
+					SetColor(0, 15);	// 미로 외벽 색 구분하기
+					printf("■");
+					SetColor(0, 15);	// 위와 같으며 아이템을 다 먹으면 색이 변경되는 걸 방지하기 위해 한번 더 사용했다.
+				}
+				else
+				{
+					SetCurPosition(x, y);
+					SetColor(0, 0);		// 미로 내부 색을 콘솔 창과 동일하게 하여 투명한 것 처럼 설정했다.
+					printf("■");
+					SetColor(0, 0);		// 위와 같으며 아이템을 다 먹으면 색이 변경되는 걸 방지하기 위해 한번 더 사용했다.
+				}
+				break;
+
+			case 0:
+				SetCurPosition(x, y);
+				printf(" ");
+				break;
+
+			case 2:
+				SetCurPosition(x, y);
+				SetColor(0, 4);
+				printf("♥");
+				SetColor(0, 15);
+				break;
+
+			case 3:
+				SetCurPosition(x, y);
+				SetColor(0, 6);
+				printf("★");
+				SetColor(0, 15);
+				break;
+
+			default:
+				break;
+			}
+
+		}
+	}
+}
+
 // 출구를 나타내기 위한 맵
 int Exitmap[가로2][세로2] =
 {

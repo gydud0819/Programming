@@ -133,12 +133,14 @@
     <ClCompile Include="MapBoder.c" />
     <ClCompile Include="Random.c" />
     <ClCompile Include="Player.c" />
+    <ClCompile Include="StartScreen.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Console.h" />
     <ClInclude Include="MapBoder.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="StartScreen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -8,8 +8,8 @@ extern int Map2[가로2][세로2];	// 미로의 크기
 int main()
 {
 	COORD stagePos = { 50,0 };
-	ShowStage1(Stage1, stagePos);			// 미로 내부가 보이는 맵
-	//ShowClearStage1();			// 미로 내부가 보이지 않는 맵
+	//ShowStage1(Stage1, stagePos);			// 미로 내부가 보이는 함수
+	ShowClearStage1(Stage1, stagePos);			// 미로 내부가 보이지 않는 함수
 	//ShowStage2();			// 두번째 스테이지 맵
 	HideCursor();
 
@@ -25,7 +25,7 @@ int main()
 	player.playerPos.posY = 2;
 	player.mazeExit = false;
 	player.heartCount = 0;
-	player.starCount = 0;
+	player.starCount = 0;	// 2번째 스테이지 아이템 초기화
 	player.CurrentStage = 1;
 
 	Exit exit;
@@ -37,16 +37,15 @@ int main()
 	SetColor(0, 2);
 	printf("옷");
 	SetColor(0, 15);
-
 		
 	while (true)
 	{
-		
 		int prevX = player.playerPos.posX;
 		int prevY = player.playerPos.posY;
 
 		// ▼▼▼ 부분 화면 갱신 ▼▼▼
-		if (prevX != player.playerPos.posX || prevY != player.playerPos.posY) {
+		if (prevX != player.playerPos.posX || prevY != player.playerPos.posY) 
+		{
 			SetCurPosition(prevX, prevY);
 			printf(" "); // 이전 위치 지우기
 			SetCurPosition(player.playerPos.posX, player.playerPos.posY);
@@ -54,9 +53,7 @@ int main()
 			printf("옷");
 			SetColor(0, 15);
 		}
-
-		
-		//GotoXY(20, 20);
+				
 		MovePlayer(&player, &exit);
 
 		Sleep(50);
