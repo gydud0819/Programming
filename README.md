@@ -18,7 +18,7 @@
 >인용문
 
 - 이미지 업로드, 강조 표시, 표 생성, 인용문 작성
-- <img width="" height=""></img>
+<img src="GameProgramming/Image/Main.PNG" witdh ="400" height ="300"></img>
 
 ### [0.02.01] 2025-04-08
 ### 게임 소개
