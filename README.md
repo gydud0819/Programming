@@ -56,4 +56,4 @@ typedef struct _ITEM	// 아이템 구조체
 ## 2차원 배열
 
 ### 이미지
-
+<img src="GameProgramming/Image/Start.png" witdh ="400" height ="300"></img>
